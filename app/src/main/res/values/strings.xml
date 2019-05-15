@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">scrum_project</string>
+    <string name="hs_text1">Was möchtest du üben ?</string>
+    <string name="hs_rb1">Addition</string>
+    <string name="hs_rb2">Subtraktion</string>
+    <string name="hs_button1">Los gehts!</string>
+    <string name="fs_textFeedback">Platzhalter_ok-super-nochüben</string>
+    <string name="fs_textStern">Platzhalter_erreichteSterne</string>
+    <string name="fs_button">Nochmal starten!</string>
+    <string name="rs_text1">Was ist die Lösung von dieser Rechnung ?</string>
+    <string name="rs_textRechnung">Platzhalter Rechnung</string>
+    <string name="rs_button1">OK</string>
+    <string name="rs_button2">Weiter</string>
+    <string name="fs_hintRechnung">Lösung hier eingeben</string>
+    <string-array name="Calculations">
+        <item>Addition</item>
+        <item>Subtraktion</item>
+        <item>Multiplikation</item>
+        <item>Division</item>
+    </string-array>
+</resources>
+
