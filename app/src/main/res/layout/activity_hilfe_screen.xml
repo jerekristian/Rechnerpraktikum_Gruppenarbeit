@@ -8,7 +8,7 @@
         tools:context=".hilfe_screen">
 
     <TextView
-            android:text="Welche Erläuterung möchtest du haben?"
+            android:text="@string/help_text1"
             android:layout_width="0dp"
             android:layout_height="28dp"
             android:id="@+id/textView_hilfe" app:layout_constraintTop_toTopOf="parent"
@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"/>
     <Button
-            android:text="Weiter"
+            android:text="@string/rs_button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_hilfe" android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
