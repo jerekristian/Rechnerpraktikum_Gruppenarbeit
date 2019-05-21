@@ -30,13 +30,22 @@ class rechen_screen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         //Timer starten
         TimerProgress(true)
         val auswahl = intent.getStringExtra("auswahl")
         if (auswahl == "Addition") {
             rs_textrechnung.text = Addition()
-        } else {
+        } else if (auswahl == "Subtraktion") {
             rs_textrechnung.text = Subtraction()
+        } else if (auswahl == "Division mit Rest") {
+            rs_textrechnung.text = DivisionMitRest()
+        } else if (auswahl == "Division ohne Rest") {
+            rs_textrechnung.text = DivisionOhneRest()
+        } else if (auswahl == "Multiplikation") {
+            rs_textrechnung.text = Multiplikation()
+        } else if (auswahl == "Gemischt") {
+            rs_textrechnung.text = Gemischt()
         }
 
         val button = findViewById<Button>(R.id.rs_button)
@@ -70,8 +79,16 @@ class rechen_screen : AppCompatActivity() {
             val auswahl = intent.getStringExtra("auswahl")
             if (auswahl == "Addition") {
                 rs_textrechnung.text = Addition()
-            } else {
+            } else if (auswahl == "Subtraktion") {
                 rs_textrechnung.text = Subtraction()
+            } else if (auswahl == "Division mit Rest") {
+                rs_textrechnung.text = DivisionMitRest()
+            } else if (auswahl == "Division ohne Rest") {
+                rs_textrechnung.text = DivisionOhneRest()
+            } else if (auswahl == "Multiplikation") {
+                rs_textrechnung.text = Multiplikation()
+            } else if (auswahl == "Gemischt") {
+                rs_textrechnung.text = Gemischt()
             }
         }
 
@@ -112,6 +129,26 @@ class rechen_screen : AppCompatActivity() {
         return bAnswer
     }
 
+    fun DivisionOhneRest(): String {
+        // b*multiplikator=a --> a/b hat nie Rest
+        val b = RandomInt(1, 10)
+        val multiplikator = RandomInt(1, 10)
+        val a = b * multiplikator
+
+        Ergebnis = a / b
+
+        return "$a / $b"
+    }
+
+    fun DivisionMitRest(): String {
+        val b = RandomInt(1, 10)
+        val a = RandomInt(b, b * 10)
+
+        Ergebnis = a / b
+
+        return "$a / $b"
+    }
+
     //Subtraktion
     fun Subtraction(): String {
 
@@ -134,6 +171,36 @@ class rechen_screen : AppCompatActivity() {
 
 
         return "$left - $right"
+    }
+
+    fun Gemischt(): String {
+
+        var Listfun = arrayListOf<String>("Addition", "Subtraktion", "Multiplikation", "Division ohne Rest")
+        var randomfun = RandomInt(0, Listfun.size - 1)
+        var selectedfun = Listfun.get(randomfun)
+
+        if (selectedfun == "Addition") {
+            return Addition()
+        } else if (selectedfun == "Subtraktion") {
+            return Subtraction()
+        } else if (selectedfun == "Multiplikation") {
+            return Multiplikation()
+        } else if (selectedfun == "Division ohne Rest") {
+            return DivisionOhneRest()
+        }
+
+        return ""
+    }
+
+    fun Multiplikation(): String {
+
+        val a = RandomInt(1, 10)
+        val b = RandomInt(1, 10)
+        Ergebnis = a * b
+
+        val bAnswer = "$a * $b"
+
+        return bAnswer
     }
 
 

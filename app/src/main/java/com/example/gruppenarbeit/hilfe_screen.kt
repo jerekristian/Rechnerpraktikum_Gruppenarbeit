@@ -25,4 +25,5 @@ class hilfe_screen : AppCompatActivity() {
         val intent = Intent(this, home_screen::class.java)
         startActivity(intent)
     }
+
 }

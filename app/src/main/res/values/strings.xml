@@ -3,6 +3,11 @@
     <string name="hs_text1">Was möchtest du üben?</string>
     <string name="hs_rb1">Addition</string>
     <string name="hs_rb2">Subtraktion</string>
+    <string name="hs_rb3">Multiplikation</string>
+    <string name="hs_rb4">Division ohne Rest</string>
+    <string name="hs_rb5">Division mit Rest</string>
+    <string name="hs_rb6">Gemischt</string>
+    <string name="hs_rb7">Kleines 1x1</string>
     <string name="hs_button1">Los gehts!</string>
     <string name="fs_textFeedback">Platzhalter_ok-super-nochüben</string>
     <string name="fs_textStern">Platzhalter_erreichteSterne</string>
@@ -13,11 +18,47 @@
     <string name="rs_button2">Weiter</string>
     <string name="fs_hintRechnung">Lösung hier eingeben</string>
     <string name="help_text1">Welche Erläuterung möchtest du haben?</string>
+    <string name="button_hilfe">zurück</string>
+    <string name="textView1">TextView</string>
+    <string name="textView2">TextView</string>
+    <string name="textView3">TextView</string>
+    <string name="textView4">TextView</string>
+    <string name="textView5">TextView</string>
+    <string name="textView6">TextView</string>
+    <string name="textView7">TextView</string>
+    <string name="textView8">TextView</string>
+    <string name="textView9">TextView</string>
+    <string name="textView10">TextView</string>
+    <string name="ed_1"></string>
+    <string name="ed_2"></string>
+    <string name="ed_3"></string>
+    <string name="ed_4"></string>
+    <string name="ed_5"></string>
+    <string name="ed_6"></string>
+    <string name="ed_7"></string>
+    <string name="ed_8"></string>
+    <string name="ed_9"></string>
+    <string name="ed_10"></string>
+    <string name="button_fertig">Fertig</string>
+    <string name="button_back">Zurück</string>
+    <string name="hs_help">Hilfe?</string>
     <string-array name="Calculations">
         <item>Addition</item>
         <item>Subtraktion</item>
         <item>Multiplikation</item>
         <item>Division</item>
+    </string-array>
+    <string-array name="Kleines1x1">
+        <item>1er Reihe</item>
+        <item>2er Reihe</item>
+        <item>3er Reihe</item>
+        <item>4er Reihe</item>
+        <item>5er Reihe</item>
+        <item>6er Reihe</item>
+        <item>7er Reihe</item>
+        <item>8er Reihe</item>
+        <item>9er Reihe</item>
+        <item>10er Reihe</item>
     </string-array>
 </resources>
 
