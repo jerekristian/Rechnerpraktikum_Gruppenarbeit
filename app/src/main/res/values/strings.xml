@@ -60,5 +60,36 @@
         <item>9er Reihe</item>
         <item>10er Reihe</item>
     </string-array>
+    <string name="Hilftext1">Die Addition ist die erste Grundrechenart. Bei dieser geht es um das Zusammenzählen von
+        zwei oder mehr Zahlen.\n\nBeispiele für die Addition sind:\n\n
+
+        2 + 3 = 5\n
+        4 + 2 = 6\n
+        5 + 8 = 13
+    </string>
+    <string name="Hilftext2">
+        Bei einer Subtraktion wird eine Zahl von einer anderen Zahl abgezogen. Sind die beiden Zahlen gleich groß ist
+        das Ergebnis Null.\n\nEinige Beispiele für die Subtraktion sind:\n\n
+
+        8 - 2 = 6\n
+        10 - 5 = 5\n
+        12 - 10 = 2
+    </string>
+    <string name="Hilftext3">
+        Die dritte Grundrechenart ist die Multiplikation. Dabei werden zwei oder auch mehr Zahlen miteinander
+        multipliziert.\n\nHier noch einige Beispiele zur Multiplikation:\n\n
+
+        2 · 3 = 6 \n
+        4 · 2 = 8 \n
+        3 · 3 = 9
+    </string>
+    <string name="Hilftext4">
+        Die letzte Grundrechenart ist die Division, manchmal auch einfach als Teilen bezeichnet. Die Division ist die
+        Umkehrung der Multiplikation.\n\nFolgend einige Beispiele: \n\n
+
+        8 : 2 = 4 \n
+        16 : 8 = 2 \n
+        20 : 10 = 2
+    </string>
 </resources>
 

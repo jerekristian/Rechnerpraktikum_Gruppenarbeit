@@ -35,5 +35,13 @@
             android:text="@string/button_hilfe"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="202dp"
+            android:id="@+id/textView_additional" android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_hilfe"/>
 
 </android.support.constraint.ConstraintLayout>
