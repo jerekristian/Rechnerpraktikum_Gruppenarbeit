@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.concurrent.scheduleAtFixedRate
@@ -259,6 +260,11 @@ class rechen_screen : AppCompatActivity() {
 
         if (rs_nummerEingabe.text.toString() == "") {
             bildAnzeigen(false)
+            Toast.makeText(
+                this,
+                "Die richtige Lösung wäre " + Ergebnis.toString() + " gewesen. Versuch's weiter!",
+                Toast.LENGTH_LONG
+            ).show()
             return false
 
         } else {
@@ -267,10 +273,20 @@ class rechen_screen : AppCompatActivity() {
 
             if (Antwort == Ergebnis) {
                 bildAnzeigen(true)
+                Toast.makeText(
+                    this,
+                    "Die richtige Lösung ist " + Ergebnis.toString() + ". Gute Arbeit!",
+                    Toast.LENGTH_LONG
+                ).show()
                 return true
 
             } else {
                 bildAnzeigen(false)
+                Toast.makeText(
+                    this,
+                    "Die richtige Lösung wäre " + Ergebnis.toString() + " gewesen. Versuch's weiter!",
+                    Toast.LENGTH_LONG
+                ).show()
                 return false
             }
         }
