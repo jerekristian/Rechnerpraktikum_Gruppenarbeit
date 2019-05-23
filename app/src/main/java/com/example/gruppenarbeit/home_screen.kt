@@ -26,8 +26,10 @@ class home_screen : AppCompatActivity() {
             beginnen.putExtra("spinnerauswahl", spinnerauswahl)
             beginnen.putExtra("auswahl", auswahl)
             startActivity(beginnen)
+            // Addition, Subtraktion, Multiplikation, Division und Gemischt werden auf schwierigkeits_screen umgeleitet
+            // Die Schwierigkeit wird auf schwierigkeits_screen ausgewählt und dann wird man auf entsprechenden rechen_screen umgeleitet
         } else {
-            val beginnen = Intent(this, rechen_screen::class.java)
+            val beginnen = Intent(this, schwierigkeit_screen::class.java)
             beginnen.putExtra("auswahl", auswahl)
             startActivity(beginnen)
         }

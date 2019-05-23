@@ -39,8 +39,6 @@ class rechen_screen : AppCompatActivity() {
             rs_textrechnung.text = Addition()
         } else if (auswahl == "Subtraktion") {
             rs_textrechnung.text = Subtraction()
-        } else if (auswahl == "Division mit Rest") {
-            rs_textrechnung.text = DivisionMitRest()
         } else if (auswahl == "Division ohne Rest") {
             rs_textrechnung.text = DivisionOhneRest()
         } else if (auswahl == "Multiplikation") {
@@ -77,13 +75,13 @@ class rechen_screen : AppCompatActivity() {
                 startActivity(screenschalter)
             }
 
+            // Input resetten damit nicht der Input von der letzten Rechnung zu sehen ist
+            ResetInput()
             val auswahl = intent.getStringExtra("auswahl")
             if (auswahl == "Addition") {
                 rs_textrechnung.text = Addition()
             } else if (auswahl == "Subtraktion") {
                 rs_textrechnung.text = Subtraction()
-            } else if (auswahl == "Division mit Rest") {
-                rs_textrechnung.text = DivisionMitRest()
             } else if (auswahl == "Division ohne Rest") {
                 rs_textrechnung.text = DivisionOhneRest()
             } else if (auswahl == "Multiplikation") {
@@ -135,15 +133,6 @@ class rechen_screen : AppCompatActivity() {
         val b = RandomInt(1, 10)
         val multiplikator = RandomInt(1, 10)
         val a = b * multiplikator
-
-        Ergebnis = a / b
-
-        return "$a / $b"
-    }
-
-    fun DivisionMitRest(): String {
-        val b = RandomInt(1, 10)
-        val a = RandomInt(b, b * 10)
 
         Ergebnis = a / b
 
@@ -213,6 +202,9 @@ class rechen_screen : AppCompatActivity() {
 
     fun TimerProgress(StartStop: Boolean) {
 
+        val schwierigkeit = intent.getStringExtra("schwierigkeit").toLong()
+
+
         // Kontrolle ob neuer Timer erstell werden soll
         if (StartStop == true) {
             rs_progressbar.max = 100
@@ -221,7 +213,7 @@ class rechen_screen : AppCompatActivity() {
         }
 
 
-        countdown.scheduleAtFixedRate(0, 100) {
+        countdown.scheduleAtFixedRate(0, schwierigkeit) {
             //1000 sind eine Sekunde
 
             this@rechen_screen.runOnUiThread(java.lang.Runnable {
@@ -290,6 +282,12 @@ class rechen_screen : AppCompatActivity() {
                 return false
             }
         }
+    }
+
+    // Hier werden die Textfelder manuell auf "" gesetzt damit beim nächsten input nicht die alten Zahlen noch gelöscht
+    // werden müssen
+    fun ResetInput() {
+        rs_nummerEingabe.setText("")
     }
 
     fun bildAnzeigen(RichtigFalsch: Boolean) {

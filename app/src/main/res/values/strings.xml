@@ -17,7 +17,13 @@
     <string name="rs_button1">OK</string>
     <string name="rs_button2">Weiter</string>
     <string name="fs_hintRechnung">Lösung hier eingeben</string>
+    <string name="fs_hintRestRechnung">Rest hier eingeben</string>
     <string name="help_text1">Welche Erläuterung möchtest du haben?</string>
+    <string name="ss_text1">Wähle eine Schwierigkeitsstufe</string>
+    <string name="ss_rb1">Leicht</string>
+    <string name="ss_rb2">Mittel</string>
+    <string name="ss_rb3">Schwer</string>
+    <string name="ss_button1">Los gehts!</string>
     <string name="button_hilfe">zurück</string>
     <string name="textView1">TextView</string>
     <string name="textView2">TextView</string>
