@@ -9,20 +9,22 @@
 
     <TextView
             android:text="@string/help_text1"
-            android:layout_width="0dp"
-            android:layout_height="28dp"
+            android:layout_width="377dp"
+            android:layout_height="58dp"
             android:id="@+id/textView_hilfe" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="150dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="80dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="16dp" android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"/>
+            android:layout_marginEnd="16dp" android:layout_marginRight="16dp" android:textSize="18sp"
+            android:textStyle="bold"/>
     <Spinner
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_hilfe" android:layout_marginTop="16dp"
+            android:id="@+id/spinner_hilfe" android:layout_marginTop="48dp"
             app:layout_constraintTop_toBottomOf="@+id/textView_hilfe" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"/>
+            android:layout_marginRight="16dp" android:spinnerMode="dropdown"
+            app:layout_constraintHorizontal_bias="0.0"/>
 
     <Button
             android:id="@+id/button_hilfe"
@@ -34,7 +36,7 @@
             android:onClick="tohome"
             android:text="@string/button_hilfe"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent" android:background="@android:color/holo_orange_dark"/>
     <TextView
             android:text="TextView"
             android:layout_width="0dp"
@@ -42,6 +44,7 @@
             android:id="@+id/textView_additional" android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/spinner_hilfe"/>
+            app:layout_constraintTop_toBottomOf="@+id/spinner_hilfe" app:layout_constraintHorizontal_bias="1.0"
+            android:textSize="18sp"/>
 
 </android.support.constraint.ConstraintLayout>

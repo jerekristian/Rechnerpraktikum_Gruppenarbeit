@@ -28,7 +28,7 @@
             android:layout_marginTop="60dp"
             android:gravity="center|center_horizontal|center_vertical"
             android:text="@string/fs_textFeedback"
-            android:textColor="@color/colorAccent"
+            android:textColor="#4CAF50"
             android:textSize="24sp"
             android:textStyle="bold"
             app:fontFamily="sans-serif"
@@ -50,8 +50,8 @@
 
     <ImageView
             android:id="@+id/fb_bilder"
-            android:layout_width="0dp"
-            android:layout_height="118dp"
+            android:layout_width="277dp"
+            android:layout_height="241dp"
             android:layout_marginBottom="76dp"
             android:layout_marginEnd="80dp"
             android:layout_marginLeft="80dp"

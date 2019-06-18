@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">scrum_project</string>
+    <string name="app_name">Fun with Math</string>
     <string name="hs_text1">Was möchtest du üben?</string>
     <string name="hs_rb1">Addition</string>
     <string name="hs_rb2">Subtraktion</string>

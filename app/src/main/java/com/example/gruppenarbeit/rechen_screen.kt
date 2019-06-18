@@ -58,7 +58,6 @@ class rechen_screen : AppCompatActivity() {
 
         if (trigger == false) {
             zaehler++
-            korrekt = Kontrolle() //siehe Kommentar rechenFunktionAufrufen
             val bild = findViewById<ImageView>(R.id.rs_bild)
             bild.visibility = View.INVISIBLE
 
@@ -250,7 +249,9 @@ class rechen_screen : AppCompatActivity() {
 
         var Antwort = 0
 
+
         if (rs_nummerEingabe.text.toString() == "") {
+            korrekt = false
             bildAnzeigen(false)
             Toast.makeText(
                 this,
@@ -270,6 +271,7 @@ class rechen_screen : AppCompatActivity() {
                     "Die richtige Lösung ist " + Ergebnis.toString() + ". Gute Arbeit!",
                     Toast.LENGTH_LONG
                 ).show()
+                korrekt = true
                 return true
 
             } else {
@@ -279,6 +281,7 @@ class rechen_screen : AppCompatActivity() {
                     "Die richtige Lösung wäre " + Ergebnis.toString() + " gewesen. Versuch's weiter!",
                     Toast.LENGTH_LONG
                 ).show()
+                korrekt = false
                 return false
             }
         }
@@ -288,6 +291,7 @@ class rechen_screen : AppCompatActivity() {
     // werden müssen
     fun ResetInput() {
         rs_nummerEingabe.setText("")
+        rs_nummerEingabe.requestFocus()
     }
 
     fun bildAnzeigen(RichtigFalsch: Boolean) {
